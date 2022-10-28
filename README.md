@@ -1,5 +1,11 @@
 # Document-Tracking-System
 
+## Technologies used:
+
+- React.js : https://reactjs.org/
+
+- Supabase : https://supabase.com/
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
