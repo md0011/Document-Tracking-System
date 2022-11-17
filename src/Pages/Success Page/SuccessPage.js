@@ -27,7 +27,7 @@ function Success() {
   }, []);
 
   async function signOutUser() {
-    const { error } = await supabase.auth.signOut();
+   await supabase.auth.signOut();
     navigate("/");
   }
 
