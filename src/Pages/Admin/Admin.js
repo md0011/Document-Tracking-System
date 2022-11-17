@@ -34,7 +34,8 @@ class Admin extends Component {
             style={{fontSize:32, width:320, height:100, marginTop:30}}
             rowsMax={4}
             defaultValue={'No data scanned'}
-            value={this.state.results[0] ? this.state.results[0].codeResult.code : 'No data scanned'}
+            value={
+              alert(this.state.results[0]) ? this.state.results[0].codeResult.code : 'No data scanned'}
         />
 
       </div>
