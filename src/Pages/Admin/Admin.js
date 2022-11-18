@@ -3,6 +3,7 @@ import Scanner from './Scanner'
 // import {Fab, TextareaAutosize, Paper} from '@material-ui/core'
 // import {ArrowBack} from '@material-ui/icons'
 import { Link } from "react-router-dom";
+const axios = require('axios');
 
 class Admin extends Component {
   state = {
@@ -18,6 +19,10 @@ class Admin extends Component {
     this.setState({ results: this.state.results.concat([result]) })
   }
 
+  componentDidMount(){
+  console.log(this.state.results[0]);
+
+  }
   render() {
     return (
       <div>
@@ -26,16 +31,17 @@ class Admin extends Component {
         </Link>
         <span>Barcode Scanner</span>
         
-        <div variant="outlined" style={{marginTop:30, width:640, height:320}}>
+        <div variant="outlined" style={{marginTop:30, width:60, height:30}}>
           <Scanner onDetected={this._onDetected} />
         </div>
 
         <textarea
-            style={{fontSize:32, width:320, height:100, marginTop:30}}
+            style={{fontSize:25, width:320, height:100, marginTop:600, display:'none'}}
             rowsMax={4}
             defaultValue={'No data scanned'}
             value={
-              alert(this.state.results[0]) ? this.state.results[0].codeResult.code : 'No data scanned'}
+              // alert(this.state.results[0].codeResult.code) ? this.state.results[0].codeResult.code : 'No data scanned'}
+              this.state.results[0] ? alert(this.state.results[0].codeResult.code) : 'No data scanned'}
         />
 
       </div>
