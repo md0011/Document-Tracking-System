@@ -27,7 +27,7 @@ function Success() {
   }, []);
 
   async function signOutUser() {
-   await supabase.auth.signOut();
+    await supabase.auth.signOut();
     navigate("/");
   }
 
@@ -36,13 +36,16 @@ function Success() {
       <header className="App-header">
         {Object.keys(user).length !== 0 ? (
           <>
-            <h1>SUCCESS</h1>
-            <button onClick={() => signOutUser()}>Sign Out</button> 
-            <input type="email" name="user" placeholder="Enter student's email id" />
-            <input type="text" placeholder="Name of Document" />
+          <div className="success-container">
+            <label htmlFor="email-id">Enter student's email id:</label>
+            <input type="email" name="user" />
+            <label htmlFor="email-id">Name of Document:</label>
+            <input type="text" />
             <Link to="/admin">
-              <button>Scan Document and register</button>
+              <button className="scan-btn">Scan Document and register</button>
             </Link>
+            </div>
+            <button onClick={() => signOutUser()} className="sign-out-btn">Sign Out</button>
           </>
         ) : (
           <>

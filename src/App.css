@@ -9,3 +9,69 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+input {
+  width: 18rem;
+  height: 35px;
+  padding: 7px;
+  outline: none;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid rgb(220, 220, 220);
+  margin-bottom: 1.5rem;
+}
+input:focus {
+  border: 2px solid rgba(0, 206, 158, 1);
+}
+
+label{
+  margin-bottom: 0.5rem;
+}
+
+.scan-btn{
+      margin-top: 0.8rem;
+      cursor: pointer;
+      background: rgb(249, 105, 14);
+      background: green;
+      color: white;
+      border: none;
+      font-size: 22px;
+      height: 3rem;
+      width: 19rem;
+      border-radius: 5px;
+      transition: 0.4s;
+}
+.scan-btn:hover{
+  transform: scale(0.9);
+}
+
+.sign-out-btn{
+    height: 2.5rem;
+    width: 7rem;
+    margin-top: 1.5rem;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    background: #ff9900;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.sign-out-btn:hover{
+  transform: scale(0.9);
+}
+
+.success-container{
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid gray; */
+  padding: 25px 15px;
+  border-radius: 5px;
+  background-color: #4a505c;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.success-container{
+  text-align: center;
+}
