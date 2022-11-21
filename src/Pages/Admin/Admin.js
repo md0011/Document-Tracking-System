@@ -3,7 +3,7 @@ import Scanner from './Scanner'
 // import {Fab, TextareaAutosize, Paper} from '@material-ui/core'
 // import {ArrowBack} from '@material-ui/icons'
 import { Link } from "react-router-dom";
-const axios = require('axios');
+// const axios = require('axios');
 
 class Admin extends Component {
   state = {
