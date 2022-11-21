@@ -36,7 +36,7 @@ class Admin extends Component {
         </div>
 
         <textarea
-            style={{fontSize:32, width:320, height:100, marginTop:30}}
+            style={{fontSize:32, width:320, height:100, marginTop:30, display:'none'}}
             rowsMax={4}
             defaultValue={'No data scanned'}
             value={
