@@ -22,14 +22,14 @@ class Admin extends Component {
   componentDidMount(){
   console.log(this.state.results[0]);
 
-  const data = this.state.results[0] ? console.log(this.state.results[0].codeResult.code) : 'No data scanned'
-this.props.barcode(data)
+  const data = this.state.results[0] ? (this.state.results[0].codeResult.code) : 'No data scanned'
+  this.props.barcode(data)
   }
   render() {
     return (
-      <div className='success-container'>
+      <div className='barcode'>
                
-        <div variant="outlined" style={{marginTop:30, width:60, height:30}}>
+        <div variant="outlined" style={{marginTop:30, width:60, height:10}}>
           <Scanner onDetected={this._onDetected} />
         </div>
 
@@ -41,6 +41,8 @@ this.props.barcode(data)
               // alert(this.state.results[0].codeResult.code) ? this.state.results[0].codeResult.code : 'No data scanned'}
               this.state.results[0] ? alert(this.state.results[0].codeResult.code) : 'No data scanned'}
         /> */}
+
+        
 
       </div>
     )

@@ -1,13 +1,13 @@
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-top: 3rem;
 }
 
 input {
@@ -29,7 +29,7 @@ label{
 }
 
 .scan-btn{
-      margin-top: 0.8rem;
+      margin-top: 42rem;
       cursor: pointer;
       background: rgb(249, 105, 14);
       background: green;
@@ -63,15 +63,16 @@ label{
 }
 
 .success-container{
+  height: 62rem;
   display: flex;
   flex-direction: column;
-  /* border: 2px solid gray; */
+  border: 2px solid gray;
   padding: 25px 15px;
   border-radius: 5px;
-  background-color: #4a505c;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
-.success-container{
-  text-align: center;
+.barcode{
+  position: relative;
+  top: 0;
+  right: 0.5rem;
 }

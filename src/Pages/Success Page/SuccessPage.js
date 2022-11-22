@@ -37,7 +37,7 @@ function Success() {
   }
 
   const max = ()=>{
-    console.log(name,email,barcode);
+    alert(email + " " + name + " " + barcode);
   }
 
   function readData(a){
@@ -50,17 +50,18 @@ function Success() {
         {Object.keys(user).length !== 0 ? (
           <>
             <div className="success-container">
-            <label htmlFor="email-id">Enter student's email id:</label>
+            <label htmlFor="email-id">Student's email-id:</label>
             <input type="email" name="user" onChange={(e)=>setEmail(e.target.value)}/>
             <label htmlFor="email-id">Name of Document:</label>
             <input type="text" onChange={(e)=>setName(e.target.value)}/>
-            <button onClick={max}>Max</button>
+            <Admin barcode={readData}/>
+            <button onClick={max} className="scan-btn">Scan Document</button>
             {/* <Link to="/admin">
               <button className="scan-btn">Scan Document and register</button>
             </Link> */}
             </div>
             <button onClick={() => signOutUser()} className="sign-out-btn">Sign Out</button>
-            <Admin barcode={readData}/>
+            {/* <Admin barcode={readData}/> */}
           </>
         ) : (
           <>
