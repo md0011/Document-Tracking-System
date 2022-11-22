@@ -29,7 +29,7 @@ label{
 }
 
 .scan-btn{
-      margin-top: 42rem;
+      margin-top: 1.5rem;
       cursor: pointer;
       background: rgb(249, 105, 14);
       background: green;
@@ -48,7 +48,8 @@ label{
 .sign-out-btn{
     height: 2.5rem;
     width: 7rem;
-    margin-top: 1.5rem;
+    margin-top: 43rem;
+    margin-bottom: 3rem;
     font-size: 18px;
     font-weight: bold;
     border: none;
@@ -63,7 +64,7 @@ label{
 }
 
 .success-container{
-  height: 62rem;
+  height: 11rem;
   display: flex;
   flex-direction: column;
   border: 2px solid gray;
@@ -74,5 +75,5 @@ label{
 .barcode{
   position: relative;
   top: 0;
-  right: 0.5rem;
+  right: 10rem;
 }

@@ -54,14 +54,14 @@ function Success() {
             <input type="email" name="user" onChange={(e)=>setEmail(e.target.value)}/>
             <label htmlFor="email-id">Name of Document:</label>
             <input type="text" onChange={(e)=>setName(e.target.value)}/>
-            <Admin barcode={readData}/>
-            <button onClick={max} className="scan-btn">Scan Document</button>
+            {/* <Admin barcode={readData}/> */}
             {/* <Link to="/admin">
               <button className="scan-btn">Scan Document and register</button>
             </Link> */}
             </div>
+            <button onClick={max} className="scan-btn">Scan Document</button>
+            <Admin barcode={readData}/>
             <button onClick={() => signOutUser()} className="sign-out-btn">Sign Out</button>
-            {/* <Admin barcode={readData}/> */}
           </>
         ) : (
           <>

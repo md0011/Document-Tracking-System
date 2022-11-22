@@ -29,7 +29,7 @@ class Admin extends Component {
     return (
       <div className='barcode'>
                
-        <div variant="outlined" style={{marginTop:30, width:60, height:10}}>
+        <div variant="outlined" style={{marginTop:30, width:10, height:10}}>
           <Scanner onDetected={this._onDetected} />
         </div>
 
