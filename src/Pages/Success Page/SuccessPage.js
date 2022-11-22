@@ -1,8 +1,10 @@
 import { createClient } from "@supabase/supabase-js";
 // import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import React from "react";
+import Admin from "../Admin/Admin";
+// import { Main } from "../../api";
 
 const supabase = createClient(
   "https://mqmanoknpskkhsinemwa.supabase.co",
@@ -11,6 +13,9 @@ const supabase = createClient(
 
 function Success() {
   const [user, setUser] = useState({});
+  const [name,setName] = useState("")
+  const [email,setEmail] = useState("")
+  const [barcode, setBarcode] = useState("")
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,21 +36,31 @@ function Success() {
     navigate("/");
   }
 
+  const max = ()=>{
+    console.log(name,email,barcode);
+  }
+
+  function readData(a){
+    setBarcode(a)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         {Object.keys(user).length !== 0 ? (
           <>
-          <div className="success-container">
+            <div className="success-container">
             <label htmlFor="email-id">Enter student's email id:</label>
-            <input type="email" name="user" />
+            <input type="email" name="user" onChange={(e)=>setEmail(e.target.value)}/>
             <label htmlFor="email-id">Name of Document:</label>
-            <input type="text" />
-            <Link to="/admin">
+            <input type="text" onChange={(e)=>setName(e.target.value)}/>
+            <button onClick={max}>Max</button>
+            {/* <Link to="/admin">
               <button className="scan-btn">Scan Document and register</button>
-            </Link>
+            </Link> */}
             </div>
             <button onClick={() => signOutUser()} className="sign-out-btn">Sign Out</button>
+            <Admin barcode={readData}/>
           </>
         ) : (
           <>
