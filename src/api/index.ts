@@ -21,9 +21,9 @@ const details ={
     "documentName": "income",
     "barId": "123789"
 }
-export function Main(){
+export function Main(email, name, barcode){
     _api.get("/main")
-    console.log();
+    console.log(email + " " + name + " " + barcode);
     
 }
 

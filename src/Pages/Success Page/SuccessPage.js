@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import React from "react";
 import Admin from "../Admin/Admin";
-// import { Main } from "../../api";
+import { Main } from "../../api";
 
 const supabase = createClient(
   "https://mqmanoknpskkhsinemwa.supabase.co",
@@ -37,7 +37,7 @@ function Success() {
   }
 
   const max = ()=>{
-    alert(email + " " + name + " " + barcode);
+    Main(email, name, barcode);
   }
 
   function readData(a){

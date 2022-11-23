@@ -12,6 +12,8 @@ class Admin extends Component {
 
   _scan = () => {
     this.setState({ scanning: !this.state.scanning })
+    // console.log(this.state.results + );
+    
   }
 
   _onDetected = result => {
@@ -19,28 +21,31 @@ class Admin extends Component {
     this.setState({ results: this.state.results.concat([result]) })
   }
 
-  componentDidMount(){
-  console.log(this.state.results[0]);
-
-  const data = this.state.results[0] ? (this.state.results[0].codeResult.code) : 'No data scanned'
-  this.props.barcode(data)
+  componentDidUpdate(){
+    const data = this.state.results[0]
+    if (data){
+      this.props.barcode(data.codeResult.code)
+    }
   }
+
+
+  
   render() {
     return (
-      <div className='barcode'>
+      <div className='barcode-ui'>
                
         <div variant="outlined" style={{marginTop:30, width:10, height:10}}>
           <Scanner onDetected={this._onDetected} />
         </div>
 
-        {/* <textarea
+        <textarea
             style={{fontSize:32, width:320, height:100, marginTop:30, display:'none'}}
             rowsMax={4}
             defaultValue={'No data scanned'}
             value={
               // alert(this.state.results[0].codeResult.code) ? this.state.results[0].codeResult.code : 'No data scanned'}
-              this.state.results[0] ? alert(this.state.results[0].codeResult.code) : 'No data scanned'}
-        /> */}
+              this.state.results[0] ? this.state.results[0].codeResult.code : 'No data scanned'}
+        />
 
         
 
