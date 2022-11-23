@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import React from "react";
 import Admin from "../Admin/Admin";
-import { Main } from "../../api";
+import  {Main} from "../../api/index.ts";
 
 const supabase = createClient(
   "https://mqmanoknpskkhsinemwa.supabase.co",

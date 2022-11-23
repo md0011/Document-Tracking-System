@@ -21,11 +21,17 @@ const details ={
     "documentName": "income",
     "barId": "123789"
 }
-export function Main(email, name, barcode){
+
+export const Main = (email, name, barcode) =>{
     _api.get("/main")
-    console.log(email + " " + name + " " + barcode);
-    
+    alert(email + " " + name + " " + barcode);
 }
+
+// function Main(email, name, barcode){
+//     _api.get("/main")
+//     console.log(email + " " + name + " " + barcode);
+    
+// }
 
 function Admins(){
     _api.get("/admins")
@@ -34,3 +40,5 @@ function Admins(){
 function SendDoc(){
     _api.get("/sendDoc")
 }
+
+// export {Main}
