@@ -66,9 +66,12 @@ function Success() {
               <button className="scan-btn">Scan Document and register</button>
             </Link> */}
             </div>
+            <div className="Levels">
             <button onClick={max} className="scan-btn">Level 1</button>
             <button onClick={max2} className="scan-btn">Level 2</button>
             <button onClick={max2} className="scan-btn">Level 3</button>
+            </div>
+            <h2 style={{marginTop:"2rem", marginBottom:"-1rem"}}>Scan barcode below:</h2>
             <Admin barcode={readData}/>
             {/* <button onClick={() => signOutUser()} className="sign-out-btn">Sign Out</button> */}
           </>
