@@ -53,6 +53,9 @@ function Success() {
       <header className="App-header">
         {Object.keys(user).length !== 0 ? (
           <>
+          <h1>Document Verification</h1>
+            <button onClick={() => signOutUser()} className="sign-out-btn">Sign Out</button>
+
             <div className="success-container">
             <label htmlFor="email-id">Student's email-id:</label>
             <input type="email" name="user" onChange={(e)=>setEmail(e.target.value)}/>
@@ -66,9 +69,8 @@ function Success() {
             <button onClick={max} className="scan-btn">Level 1</button>
             <button onClick={max2} className="scan-btn">Level 2</button>
             <button onClick={max2} className="scan-btn">Level 3</button>
-            {/* <button onClick={max} className="scan-btn">Scan Document</button> */}
             <Admin barcode={readData}/>
-            <button onClick={() => signOutUser()} className="sign-out-btn">Sign Out</button>
+            {/* <button onClick={() => signOutUser()} className="sign-out-btn">Sign Out</button> */}
           </>
         ) : (
           <>
