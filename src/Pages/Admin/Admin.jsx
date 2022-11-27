@@ -7,7 +7,8 @@ import Scanner from './Scanner'
 
 class Admin extends Component {
   state = {
-    results: [],
+    results:[],
+    data:""
   }
 
   _scan = () => {
@@ -24,6 +25,14 @@ class Admin extends Component {
   componentDidUpdate(){
     const data = this.state.results[0]
     if (data){
+      if (data.codeResult.code===this.state.data){
+        return
+      }
+      alert("barcode scanned " + data.codeResult.code)
+
+      this.setState({
+        data:data.codeResult.code
+      })
       this.props.barcode(data.codeResult.code)
     }
   }
@@ -37,17 +46,6 @@ class Admin extends Component {
         <div variant="outlined" style={{marginTop:30, width:10, height:10}}>
           <Scanner onDetected={this._onDetected} />
         </div>
-
-        <textarea
-            style={{fontSize:32, width:320, height:100, marginTop:30, display:'none'}}
-            rowsMax={4}
-            defaultValue={'No data scanned'}
-            value={
-              // alert(this.state.results[0].codeResult.code) ? this.state.results[0].codeResult.code : 'No data scanned'}
-              this.state.results[0] ? this.state.results[0].codeResult.code : 'No data scanned'}
-        />
-
-        
 
       </div>
     )

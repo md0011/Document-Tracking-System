@@ -5,11 +5,12 @@ import { useEffect, useState } from "react";
 import React from "react";
 import Admin from "../Admin/Admin";
 import  {Main} from "../../api/index.ts";
-
+import  {Admins} from "../../api/index.ts";
 const supabase = createClient(
   "https://mqmanoknpskkhsinemwa.supabase.co",
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1xbWFub2tucHNra2hzaW5lbXdhIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjY4NjMyMDgsImV4cCI6MTk4MjQzOTIwOH0.hKyRlLYNCQk4ED3RNqX7ABgDT1KY5DLVv5l2F3tFyLU"
 );
+
 
 function Success() {
   const [user, setUser] = useState({});
@@ -39,6 +40,9 @@ function Success() {
   const max = ()=>{
     Main(email, name, barcode);
   }
+  const max2 = ()=>{
+    Admins(email, name, barcode);
+  }
 
   function readData(a){
     setBarcode(a)
@@ -59,7 +63,10 @@ function Success() {
               <button className="scan-btn">Scan Document and register</button>
             </Link> */}
             </div>
-            <button onClick={max} className="scan-btn">Scan Document</button>
+            <button onClick={max} className="scan-btn">Level 1</button>
+            <button onClick={max2} className="scan-btn">Level 2</button>
+            <button onClick={max2} className="scan-btn">Level 3</button>
+            {/* <button onClick={max} className="scan-btn">Scan Document</button> */}
             <Admin barcode={readData}/>
             <button onClick={() => signOutUser()} className="sign-out-btn">Sign Out</button>
           </>
