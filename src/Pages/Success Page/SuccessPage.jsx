@@ -67,9 +67,9 @@ function Success() {
             </Link> */}
             </div>
             <div className="Levels">
-            <button onClick={max} className="scan-btn">Level 1</button>
-            <button onClick={max2} className="scan-btn">Level 2</button>
-            <button onClick={max2} className="scan-btn">Level 3</button>
+            <button onClick={max} className="scan-btn">Desk 1</button>
+            <button onClick={max2} className="scan-btn">Desk 2</button>
+            <button onClick={max2} className="scan-btn">Approve</button>
             </div>
             <h2 style={{marginTop:"2rem", marginBottom:"-1rem"}}>Scan barcode below:</h2>
             <Admin barcode={readData}/>

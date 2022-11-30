@@ -5,7 +5,7 @@ const supabase = createClient(
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1xbWFub2tucHNra2hzaW5lbXdhIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjY4NjMyMDgsImV4cCI6MTk4MjQzOTIwOH0.hKyRlLYNCQk4ED3RNqX7ABgDT1KY5DLVv5l2F3tFyLU"
   );
 const _api = axios.create({
-    baseURL: "https://3000-md0011-dtsbackend-dhkbonypoyg.ws-us77.gitpod.io"
+    baseURL: "https://3000-md0011-dtsbackend-ceg5x4paeps.ws-us77.gitpod.io"
 })
 
 export type UserDoc = {
